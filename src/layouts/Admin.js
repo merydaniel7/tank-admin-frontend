@@ -16,6 +16,7 @@ import FooterAdmin from "components/Footers/FooterAdmin.js";
 
 import Dashboard from "views/admin/Dashboard.js";
 import Tables from "views/admin/Tables.js";
+import MonthlyStats from "views/admin/MonthlyStats";
 
 export default function Admin() {
   const { isLoggedIn } = useContext(UserContext);
@@ -32,6 +33,7 @@ export default function Admin() {
           <Switch>
             <Route exact path="/admin/dashboard" component={Dashboard} />
             <Route exact path="/admin/tables" component={Tables} />
+            <Route exact path="/admin/stats" component={MonthlyStats} />
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
           <FooterAdmin />
