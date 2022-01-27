@@ -9,6 +9,7 @@ import "assets/styles/tailwind.css";
 
 import Admin from "layouts/Admin.js";
 import Auth from "layouts/Auth.js";
+import Index from "layouts/Index";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
       {/* add routes with layouts */}
       {/* <Route path="/" component={Admin} /> */}
       <UserInfoProvider>
-        <Route exact path="/" component={Admin} />
+        <Route exact path="/" component={Index} />
         <Route path="/admin" component={Admin} />
         <Route path="/auth" component={Auth} />
       </UserInfoProvider>
