@@ -1080,6 +1080,15 @@ select {
   }
 }
 
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
+
+.bg-grey {
+  --tw-bg-opacity: 1;
+  background-color: rgba(169, 169, 169, var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
@@ -2125,6 +2134,10 @@ select {
   padding-top: 8rem;
 }
 
+.pt-48 {
+  padding-top: 12rem;
+}
+
 .pb-32 {
   padding-bottom: 8rem;
 }
@@ -2178,6 +2191,10 @@ select {
 
 .top-0 {
   top: 0px;
+}
+
+.top-3 {
+  top: 25%;
 }
 
 .right-0 {
@@ -2513,6 +2530,10 @@ select {
 }
 
 .w-1\/2 {
+  width: 50%;
+}
+
+.w-1per2 {
   width: 50%;
 }
 
