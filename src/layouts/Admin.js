@@ -34,7 +34,7 @@ export default function Admin() {
             <Route exact path="/admin/dashboard" component={Dashboard} />
             <Route exact path="/admin/tables" component={Tables} />
             <Route exact path="/admin/stats" component={MonthlyStats} />
-            <Redirect from="/admin" to="/admin/dashboard" />
+            {/* <Redirect from="/admin" to="/admin/dashboard" /> */}
           </Switch>
           <FooterAdmin />
         </div>
