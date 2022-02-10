@@ -44,6 +44,7 @@ const Login = () => {
       if(res.data.username) {
         cookie.save("Authorization", res.data.accessToken, { path: '/', maxAge: 259200  });
         cookie.save("username", res.data.username, { path: '/', maxAge: 259200  });
+        cookie.save("refreshToken", res.data.refreshToken, { path: '/', maxAge: 259200  });
         setUserName(res.data.username);
         setLoginOrLogoutTriggered(true);                      
         setLoginSuccess(true);
