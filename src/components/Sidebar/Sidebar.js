@@ -79,12 +79,12 @@ export default function Sidebar() {
             <hr className="my-4 md:min-w-full" />
             {/* Heading */}
             <h6 className="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline">
-              Admin Pages
+              Pages
             </h6>
             {/* Navigation */}
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
-              <li className="items-center">
+              {/* <li className="items-center">
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
@@ -104,7 +104,7 @@ export default function Sidebar() {
                   ></i>{" "}
                   Dashboard
                 </Link>
-              </li>
+              </li> */}
 
               <li className="items-center">
                 <Link
@@ -118,7 +118,7 @@ export default function Sidebar() {
                 >
                   <i
                     className={
-                      "fas fa-table mr-2 text-sm " +
+                      "far fa-chart-bar mr-2 text-sm " +
                       (window.location.href.indexOf("/admin/stats") !== -1
                         ? "opacity-75"
                         : "text-blueGray-300")
