@@ -2,6 +2,7 @@ import { React, useContext, useState, createRef } from "react";
 import { createPopper } from "@popperjs/core";
 import { UserContext } from '../../services/UserContext';
 import cookie from 'react-cookies';
+import axios from 'axios';
 
 const UserDropdown = () => {
   // dropdown props
@@ -22,9 +23,23 @@ const UserDropdown = () => {
 
   const logoutUser = (e) => {
     e.preventDefault();
-    cookie.remove('Authorization', { path: '/' });
-    cookie.remove('username', { path: '/' });
-    setLoginOrLogoutTriggered(true);
+
+    const username = cookie.load("username");
+    axios
+    .post('http://localhost:8080/api/auth/logout',
+    {
+      username
+    })
+    .then(res => {
+        cookie.remove('Authorization', { path: '/' });
+        cookie.remove('username', { path: '/' });
+        cookie.remove('refreshToken', { path: '/' });
+        setLoginOrLogoutTriggered(true);
+        console.log(res.data.message)
+      },
+      error => {
+          console.log(error.toString());
+    })
   }
 
   return (
